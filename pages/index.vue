@@ -62,10 +62,43 @@
         class="skills"
       >
         <v-container class="section pa-0">
-          <v-row class="skills__title justify-center font-weight-bold mb-5">
+          <div class="skills__title text-center font-weight-bold mb-5">
             Skills
+          </div>
+          <div class="skills__subtitle text-center font-weight-medium mb-11">
+            I work with such technologies as
+          </div>
+          <v-row class="mt-11">
+            <v-col
+              v-for="(item, i) in icons"
+              :key="i"
+              cols="3"
+              class="pa-0 d-flex flex-column justify-center align-center mb-6"
+            >
+              <img
+                :src="require(`~/assets/images/${item.icon}.jpg`)"
+                class="skills__icon mb-4"
+              >
+              <div class="skills__name font-weight-bold">
+                {{ item.text }}
+              </div>
+            </v-col>
           </v-row>
         </v-container>
+      </v-col>
+
+      <v-col
+        cols="12"
+        class="portfolio"
+      >
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col cols="12" md="5" lg="4">
+            <p class="portfolio__title text-center font-weight-bold mb-5">Portfolio</p>
+          </v-col>
+        </v-row>
       </v-col>
 
     </v-row>
@@ -76,9 +109,28 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  data: () => ({
+    icons: [
+      { text: 'Html', icon: 'html' },
+      { text: 'Css', icon: 'css' },
+      { text: 'Scss', icon: 'sass' },
+      { text: 'Js', icon: 'js' },
+
+      { text: 'Vue.js', icon: 'vue' },
+      { text: 'Nuxt', icon: 'nuxt' },
+      { text: 'Vuetify', icon: 'vuetify' },
+      { text: 'Git', icon: 'git' },
+
+      { text: 'Figma', icon: 'figma' },
+      { text: 'Avocode', icon: 'avocode' },
+      { text: 'Trello', icon: 'trello' },
+      { text: 'Jest', icon: 'jest' }
+    ],
+  }),
   components: {
     Logo
   }
+
 }
 </script>
 
@@ -136,6 +188,37 @@ export default {
     &__title {
       font-size: 34px;
       line-height: 42px;
+    }
+
+    &__subtitle {
+      font-family: Gilroy-Medium, sans-serif;
+    }
+
+    &__icon {
+      max-height: 88px;
+      max-width: 88px;
+    }
+
+    &__name {
+      font-size: 14px;
+      line-height: 17px;
+      color: #828282;
+
+    }
+  }
+
+  .portfolio {
+    background: #F6F6F6;
+    padding: 110px 0 90px 0 !important;
+
+    &__title {
+      font-size: 34px;
+      line-height: 42px;
+    }
+
+    &__text {
+      line-height: 22px;
+      font-family: Gilroy-Medium, sans-serif;
     }
   }
 

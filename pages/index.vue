@@ -121,9 +121,59 @@
               color="black"
               dark
               href="https://t.me/dianaidd"
-              class="contacts__btn font-weight-bold px-6"
+              target="_blank"
+              class="contacts__btn font-weight-bold px-6 mb-12"
             >Send message</v-btn>
           </div>
+          <v-row class="justify-center align-center mt-6">
+            <v-col
+              cols="2"
+              class="pa-0 d-flex flex-column justify-center align-center"
+            >
+              <v-btn
+                icon
+                tile
+                href="https://www.linkedin.com/in/dianaid/"
+                target="_blank"
+              >
+                <img
+                  :src="require('~/assets/images/in.png')"
+                  class="contacts__icon"
+                >
+              </v-btn>
+            </v-col>
+            <v-col
+              cols="2"
+              class="pa-0 d-flex flex-column justify-center align-center"
+            >
+              <v-btn
+                icon
+                href="https://github.com/DianaIdiatullina/"
+                target="_blank"
+              >
+                <img
+                  :src="require('~/assets/images/github.png')"
+                  class="contacts__icon"
+                >
+              </v-btn>
+            </v-col>
+            <v-col
+              cols="2"
+              class="pa-0 d-flex flex-column justify-center align-center"
+            >
+              <v-btn
+                icon
+                tile
+                href="https://www.instagram.com/haosperfection/"
+                target="_blank"
+              >
+                <img
+                  :src="require('~/assets/images/ig.png')"
+                  class="contacts__icon"
+                >
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-container>
       </v-col>
 
@@ -261,6 +311,11 @@ export default {
     &__btn {
       text-transform: none;
       height: 42px !important;
+    }
+
+    &__icon {
+      max-height: 40px;
+      max-width: 40px;
     }
   }
 

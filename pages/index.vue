@@ -91,14 +91,40 @@
         cols="12"
         class="portfolio"
       >
-        <v-row
-          align="center"
-          justify="center"
-        >
-          <v-col cols="12" md="5" lg="4">
-            <p class="portfolio__title text-center font-weight-bold mb-5">Portfolio</p>
-          </v-col>
-        </v-row>
+        <v-container class="section pa-0">
+          <p class="portfolio__title text-center font-weight-bold mb-12">Portfolio</p>
+          <div>
+            <img
+              :src="require('~/assets/images/rbroker/1.png')"
+              class="portfolio__image mb-11 elevation-11"
+            >
+            <p class="portfolio__name font-weight-medium text-center">Online fashion store - Homepage</p>
+          </div>
+        </v-container>
+      </v-col>
+
+      <v-col
+        cols="12"
+        class="contacts skills"
+      >
+        <v-container class="section pa-0">
+          <div class="skills__title text-center font-weight-bold mb-6">
+            Contacts
+          </div>
+          <div class="skills__subtitle text-center font-weight-medium mb-11">
+            Want to know more or just chat?<br>
+            You are welcome!
+          </div>
+          <div class="text-center">
+            <v-btn
+              rounded
+              color="black"
+              dark
+              href="https://t.me/dianaidd"
+              class="contacts__btn font-weight-bold px-6"
+            >Send message</v-btn>
+          </div>
+        </v-container>
       </v-col>
 
     </v-row>
@@ -219,6 +245,22 @@ export default {
     &__text {
       line-height: 22px;
       font-family: Gilroy-Medium, sans-serif;
+    }
+
+    &__image {
+      max-width: 100%;
+    }
+
+    &__name {
+      font-family: Gilroy-Medium, sans-serif;
+      text-decoration: underline;
+    }
+  }
+
+  .contacts {
+    &__btn {
+      text-transform: none;
+      height: 42px !important;
     }
   }
 

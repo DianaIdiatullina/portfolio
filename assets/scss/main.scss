@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,7 +50,6 @@ table {
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: Gilroy-Bold, sans-serif;
@@ -76,4 +79,8 @@ select {
   font: inherit;
 }
 
-
+@media (min-width: 1264px) {
+  .section {
+    max-width: 940px !important;
+  }
+}

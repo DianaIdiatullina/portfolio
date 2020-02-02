@@ -6,9 +6,9 @@
     <v-row no-gutters>
       <v-col
         cols="12"
-        class="cover"
+        class="cover mt-6 main__section"
       >
-        <v-container class="section pa-0">
+        <v-container class="section">
           <v-row class="mb-12">
             <v-col
               cols="6"
@@ -41,8 +41,9 @@
       </v-col>
 
       <v-col
+        id="about"
         cols="12"
-        class="about"
+        class="about main__section"
       >
         <v-row
           align="center"
@@ -58,8 +59,9 @@
       </v-col>
 
       <v-col
+        id="skills"
         cols="12"
-        class="skills"
+        class="skills main__section"
       >
         <v-container class="section pa-0">
           <div class="skills__title text-center font-weight-bold mb-5">
@@ -88,8 +90,9 @@
       </v-col>
 
       <v-col
+        id="portfolio"
         cols="12"
-        class="portfolio"
+        class="portfolio main__section"
       >
         <v-container class="section pa-0">
           <p class="portfolio__title text-center font-weight-bold mb-12">Portfolio</p>
@@ -104,8 +107,9 @@
       </v-col>
 
       <v-col
+        id="contacts"
         cols="12"
-        class="contacts skills"
+        class="contacts skills main__section"
       >
         <v-container class="section pa-0">
           <div class="skills__title text-center font-weight-bold mb-6">
@@ -174,6 +178,10 @@
               </v-btn>
             </v-col>
           </v-row>
+          <div class="contacts__text text-center font-weight-medium mt-7">
+            Like me on<br>
+            LinkedIn, Instagram, Behance, Dribble
+          </div>
         </v-container>
       </v-col>
 
@@ -182,8 +190,6 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
   data: () => ({
     icons: [
@@ -202,120 +208,118 @@ export default {
       { text: 'Trello', icon: 'trello' },
       { text: 'Jest', icon: 'jest' }
     ],
-  }),
-  components: {
-    Logo
-  }
-
+  })
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-  @media (min-width: 1264px) {
-    .section {
-      max-width: 940px !important;
-    }
-  }
+  .main {
+    .cover {
+      margin-bottom: 100px;
 
-  .cover {
-    margin-bottom: 100px;
+      &__name {
+        font-size: 48px;
+        line-height: 60px;
+      }
 
-    &__name {
-      font-size: 48px;
-      line-height: 60px;
-    }
+      &__box {
+        position: relative;
+      }
 
-    &__box {
-      position: relative;
-    }
+      &__lang {
+        transform: rotate(-90deg);
+        font-size: 16px;
+        position: absolute;
+        right: -16px;
+        bottom: 35px;
 
-    &__lang {
-      transform: rotate(-90deg);
-      font-size: 16px;
-      position: absolute;
-      right: -16px;
-      bottom: 35px;
-
-      &--not-active {
-        color: #828282;
+        &--not-active {
+          color: #828282;
+        }
       }
     }
-  }
 
-  .about {
-    background: #F6F6F6;
-    padding: 120px 0 100px 0 !important;
+    .about {
+      background: #F6F6F6;
+      padding: 120px 0 100px 0 !important;
 
-    &__title {
-      font-size: 34px;
-      line-height: 42px;
+      &__title {
+        font-size: 34px;
+        line-height: 42px;
+      }
+
+      &__text {
+        line-height: 22px;
+        font-family: Gilroy-Medium, sans-serif;
+      }
     }
 
-    &__text {
-      line-height: 22px;
-      font-family: Gilroy-Medium, sans-serif;
-    }
-  }
+    .skills {
+      padding: 90px 0 110px 0 !important;
 
-  .skills {
-    padding: 90px 0 110px 0 !important;
+      &__title {
+        font-size: 34px;
+        line-height: 42px;
+      }
 
-    &__title {
-      font-size: 34px;
-      line-height: 42px;
-    }
+      &__subtitle {
+        font-family: Gilroy-Medium, sans-serif;
+      }
 
-    &__subtitle {
-      font-family: Gilroy-Medium, sans-serif;
-    }
+      &__icon {
+        max-height: 88px;
+        max-width: 88px;
+      }
 
-    &__icon {
-      max-height: 88px;
-      max-width: 88px;
-    }
+      &__name {
+        font-size: 14px;
+        line-height: 17px;
+        color: #828282;
 
-    &__name {
-      font-size: 14px;
-      line-height: 17px;
-      color: #828282;
-
-    }
-  }
-
-  .portfolio {
-    background: #F6F6F6;
-    padding: 110px 0 90px 0 !important;
-
-    &__title {
-      font-size: 34px;
-      line-height: 42px;
+      }
     }
 
-    &__text {
-      line-height: 22px;
-      font-family: Gilroy-Medium, sans-serif;
+    .portfolio {
+      background: #F6F6F6;
+      padding: 110px 0 90px 0 !important;
+
+      &__title {
+        font-size: 34px;
+        line-height: 42px;
+      }
+
+      &__text {
+        line-height: 22px;
+        font-family: Gilroy-Medium, sans-serif;
+      }
+
+      &__image {
+        max-width: 100%;
+      }
+
+      &__name {
+        font-family: Gilroy-Medium, sans-serif;
+        text-decoration: underline;
+      }
     }
 
-    &__image {
-      max-width: 100%;
-    }
+    .contacts {
+      &__btn {
+        text-transform: none;
+        height: 42px !important;
+      }
 
-    &__name {
-      font-family: Gilroy-Medium, sans-serif;
-      text-decoration: underline;
-    }
-  }
+      &__icon {
+        max-height: 40px;
+        max-width: 40px;
+      }
 
-  .contacts {
-    &__btn {
-      text-transform: none;
-      height: 42px !important;
-    }
-
-    &__icon {
-      max-height: 40px;
-      max-width: 40px;
+      &__text {
+        font-size: 14px;
+        font-family: Gilroy-Medium, sans-serif;
+        color: #828282;
+      }
     }
   }
 

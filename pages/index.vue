@@ -6,10 +6,10 @@
     <v-row no-gutters>
       <v-col
         cols="12"
-        class="cover mt-6 main__section"
+        class="cover mt-6 main__section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0"
       >
         <v-container class="section">
-          <v-row class="mb-12">
+          <v-row class="mb-12 flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
             <v-col
               cols="6"
               class="pa-0"
@@ -28,14 +28,22 @@
             </v-col>
             <v-col
               cols="3"
-              class="cover__box font-weight-bold pa-0"
+              class="cover__box font-weight-bold pa-0 hidden-sm-and-down"
             >
               <span class="cover__lang"><span class="cover__lang--not-active">RU</span> | ENG</span>
             </v-col>
           </v-row>
 
-          <v-row>
-            <img :src="require('~/assets/images/foto.jpg')">
+          <v-row justify="center">
+            <img
+              :src="require('~/assets/images/foto.jpg')"
+              class="hidden-xs-only"
+            >
+            <img
+              :src="require('~/assets/images/foto_mobile.jpg')"
+              width="100%"
+              class="hidden-sm-and-up"
+            >
           </v-row>
         </v-container>
       </v-col>
@@ -48,11 +56,12 @@
         <v-row
           align="center"
           justify="center"
+          class="px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0"
         >
           <v-col cols="12" md="5" lg="4">
             <p class="about__title text-center font-weight-bold mb-5">About me</p>
-            <p class="about__text text-center font-weight-medium mb-7">Hi, I'm Denis – UX/UI designer from Minsk.<br>I'm interested in design and everything connected with it.</p>
-            <p class="about__text text-center font-weight-medium mb-7">I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+            <p class="about__text text-center font-weight-medium mb-7">Hi, I'm Diana – frontend developer from Minsk.</p>
+            <p class="about__text text-center font-weight-medium mb-7">I like the functional and stylish web designs and make applications layout, work with details.</p>
             <p class="about__text text-center font-weight-medium mb-7">Ready to implement excellent projects with wonderful people.</p>
           </v-col>
         </v-row>
@@ -63,14 +72,14 @@
         cols="12"
         class="skills main__section"
       >
-        <v-container class="section pa-0">
+        <v-container class="section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0">
           <div class="skills__title text-center font-weight-bold mb-5">
             Skills
           </div>
           <div class="skills__subtitle text-center font-weight-medium mb-11">
             I work with such technologies as
           </div>
-          <v-row class="mt-11">
+          <v-row class="mt-11 flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row justify-center align-center">
             <v-col
               v-for="(item, i) in icons"
               :key="i"
@@ -94,14 +103,21 @@
         cols="12"
         class="portfolio main__section"
       >
-        <v-container class="section pa-0">
+        <v-container class="section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0">
           <p class="portfolio__title text-center font-weight-bold mb-12">Portfolio</p>
-          <div>
+          <div class="portfolio__item">
             <img
               :src="require('~/assets/images/rbroker/1.png')"
               class="portfolio__image mb-11 elevation-11"
             >
-            <p class="portfolio__name font-weight-medium text-center">Online fashion store - Homepage</p>
+            <p class="portfolio__name font-weight-medium text-center">Web-service for self-registration of the client's application<br> for installments or credit</p>
+          </div>
+          <div>
+            <img
+              :src="require('~/assets/images/rleader/1.png')"
+              class="portfolio__image mb-11 elevation-11"
+            >
+            <p class="portfolio__name font-weight-medium text-center">CRM system for optimizing the processing of loan applications<br> and installments with subsequent transfer<br> to the banking system</p>
           </div>
         </v-container>
       </v-col>
@@ -111,7 +127,7 @@
         cols="12"
         class="contacts skills main__section"
       >
-        <v-container class="section pa-0">
+        <v-container class="section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0">
           <div class="skills__title text-center font-weight-bold mb-6">
             Contacts
           </div>
@@ -180,7 +196,7 @@
           </v-row>
           <div class="contacts__text text-center font-weight-medium mt-7">
             Like me on<br>
-            LinkedIn, Instagram, Behance, Dribble
+            LinkedIn, Github, Instagram
           </div>
         </v-container>
       </v-col>
@@ -301,6 +317,10 @@ export default {
       &__name {
         font-family: Gilroy-Medium, sans-serif;
         text-decoration: underline;
+      }
+
+      &__item {
+        margin-bottom: 110px;
       }
     }
 

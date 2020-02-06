@@ -27,6 +27,12 @@
     padding-top: 83.5px;
   }
 
+  @media (max-width: 959px) {
+    .page {
+      padding-top: 0;
+    }
+  }
+
 </style>
 
 

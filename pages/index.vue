@@ -9,10 +9,11 @@
         class="cover mt-6 main__section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0"
       >
         <v-container class="section">
-          <v-row class="mb-12 flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
+          <v-row class="mb-12">
             <v-col
-              cols="6"
-              class="pa-0"
+              cols="12"
+              sm="6"
+              class="pa-0 mb-4 mb-sm-0"
             >
             <span class="cover__name font-weight-bold">
               Diana<br>
@@ -20,7 +21,8 @@
             </span>
             </v-col>
             <v-col
-              cols="3"
+              cols="12"
+              sm="3"
               class="d-flex align-end font-weight-medium pa-0"
             >
               Frontend Developer<br>
@@ -53,18 +55,21 @@
         cols="12"
         class="about main__section"
       >
-        <v-row
-          align="center"
-          justify="center"
-          class="px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0"
-        >
-          <v-col cols="12" md="5" lg="4">
-            <p class="about__title text-center font-weight-bold mb-5">About me</p>
-            <p class="about__text text-center font-weight-medium mb-7">Hi, I'm Diana – frontend developer from Minsk.</p>
-            <p class="about__text text-center font-weight-medium mb-7">I like the functional and stylish web designs and make applications layout, work with details.</p>
-            <p class="about__text text-center font-weight-medium mb-7">Ready to implement excellent projects with wonderful people.</p>
+        <v-container class="section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0">
+          <v-col cols="12">
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-col cols="12" md="6">
+                <p class="about__title text-center font-weight-bold mb-5">About me</p>
+                <p class="about__text text-center font-weight-medium mb-7">Hi, I'm Diana – frontend developer from Minsk.</p>
+                <p class="about__text text-center font-weight-medium mb-7">I like the functional and stylish web designs and make applications layout, work with details.</p>
+                <p class="about__text text-center font-weight-medium mb-7">Ready to implement excellent projects with wonderful people.</p>
+              </v-col>
+            </v-row>
           </v-col>
-        </v-row>
+        </v-container>
       </v-col>
 
       <v-col
@@ -72,7 +77,7 @@
         cols="12"
         class="skills main__section"
       >
-        <v-container class="section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0">
+        <v-container class="section px-5 px-sm-5 px-md-0 px-lg-0 px-xl-0">
           <div class="skills__title text-center font-weight-bold mb-5">
             Skills
           </div>
@@ -316,7 +321,6 @@ export default {
 
       &__name {
         font-family: Gilroy-Medium, sans-serif;
-        text-decoration: underline;
       }
 
       &__item {
@@ -341,6 +345,28 @@ export default {
         color: #828282;
       }
     }
-  }
 
+    @media (max-width: 959px) {
+      .about {
+        padding: 81px 0 76px 0 !important;
+      }
+
+      .cover {
+        padding-top: 40px;
+        margin-bottom: 83px;
+      }
+
+      .skills {
+        padding: 83px 0 98px 0 !important;
+      }
+
+      .portfolio {
+        padding: 81px 0 80px 0 !important;
+
+        &__item {
+          margin-bottom: 77px;
+        }
+      }
+    }
+  }
 </style>

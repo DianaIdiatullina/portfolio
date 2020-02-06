@@ -1,0 +1,26 @@
+{
+  "name": "Diana",
+  "lastName": "Idiatullina",
+  "years": "years old, Minsk",
+  "about": {
+    "title": "About me",
+    "text1": "Hi, I'm Diana – frontend developer from Minsk.",
+    "text2": "I like the functional and stylish web designs and make applications layout, work with details.",
+    "text3": "Ready to implement excellent projects with wonderful people."
+  },
+  "skills": {
+    "title": "Skills",
+    "text" : "I work with such technologies as"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "rbroker": "Web-service for self-registration of the client's application<br> for installments or credit",
+    "rleader": "CRM system for optimizing the processing of loan applications<br> and installments with subsequent transfer<br> to the banking system"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "text1" : "Want to know more or just chat?<br>You are welcome!",
+    "button": "Send message",
+    "text2": "Like me on<br>LinkedIn, Github, Instagram"
+  }
+}

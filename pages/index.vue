@@ -6,7 +6,7 @@
     <v-row no-gutters>
       <v-col
         cols="12"
-        class="cover mt-6 main__section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0"
+        class="cover main__section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0"
       >
         <v-container class="section">
           <v-row class="mb-12">
@@ -15,10 +15,25 @@
               sm="6"
               class="pa-0 mb-4 mb-sm-0"
             >
-            <span class="cover__name font-weight-bold">
-              {{ $t("name") }}<br>
-              {{ $t("lastName") }}
-            </span>
+              <v-row>
+                <v-col cols="10">
+                  <span class="cover__name font-weight-bold">
+                    {{ $t("name") }}<br>
+                    {{ $t("lastName") }}
+                  </span>
+                </v-col>
+                <v-col cols="2">
+                  <v-btn
+                    icon
+                    class="hidden-sm-and-up"
+                    @click.stop="drawer = !drawer"
+                  >
+                    <img
+                      :src="require('~/assets/images/menu.png')"
+                    >
+                  </v-btn>
+                </v-col>
+              </v-row>
             </v-col>
             <v-col
               cols="12"
@@ -226,12 +241,44 @@
       </v-col>
 
     </v-row>
+
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+      right
+    >
+      <v-list>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+        >
+          <v-list-item-content>
+            <v-list-item-title>
+              <a :href="'#' + item.id">
+                {{ item.title }}
+              </a>
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
   </v-container>
 </template>
 
 <script>
 export default {
   data: () => ({
+    drawer: null,
+    items: [
+      { title: 'Home', id: 'home' },
+      { title: 'About me', id: 'about' },
+      { title: 'Skills', id: 'skills' },
+      { title: 'Portfolio', id: 'portfolio' },
+      { title: 'Contacts', id: 'contacts' },
+    ],
     notActive: 'ru',
     icons: [
       { text: 'Html', icon: 'html' },

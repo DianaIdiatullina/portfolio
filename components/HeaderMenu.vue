@@ -1,5 +1,5 @@
 <template>
-  <div class="header-menu hidden-sm-and-down">
+  <div class="header-menu d-none d-sm-flex">
     <v-container class="section">
       <v-row
         justify="space-between"

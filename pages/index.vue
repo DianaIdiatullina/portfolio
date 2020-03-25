@@ -22,7 +22,10 @@
                     {{ $t("lastName") }}
                   </span>
                 </v-col>
-                <v-col cols="2">
+                <v-col
+                  v-if="false"
+                  cols="2"
+                >
                   <v-btn
                     icon
                     class="hidden-sm-and-up"
@@ -139,6 +142,20 @@
         <v-container class="section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0">
           <p class="portfolio__title text-center font-weight-bold mb-12">{{ $t("portfolio.title") }}</p>
           <div class="portfolio__item">
+            <div class="d-flex justify-center">
+              <img
+                :src="require('~/assets/images/quest/2.png')"
+                class="portfolio__image mb-5"
+              >
+            </div>
+            <a
+              href="https://uq.mercury.xamtal.ru/"
+              target="_blank"
+              class="portfolio__name font-weight-medium text-center black--text"
+              v-html="$t('portfolio.quest')"
+            />
+          </div>
+          <div class="portfolio__item">
             <img
               :src="require('~/assets/images/rbroker/1.png')"
               class="portfolio__image mb-11 elevation-11"
@@ -243,6 +260,7 @@
     </v-row>
 
     <v-navigation-drawer
+      v-if="false"
       v-model="drawer"
       absolute
       temporary
@@ -411,6 +429,7 @@ export default {
 
       &__item {
         margin-bottom: 110px;
+        text-align: center;
       }
     }
 

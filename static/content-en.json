@@ -14,6 +14,7 @@
   },
   "portfolio": {
     "title": "Portfolio",
+    "quest": "PWA-application for quest-excursions",
     "rbroker": "Web-service for self-registration of the client's application<br> for installments or credit",
     "rleader": "CRM system for optimizing the processing of loan applications<br> and installments with subsequent transfer<br> to the banking system"
   },

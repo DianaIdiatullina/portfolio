@@ -160,8 +160,10 @@
               :src="require('~/assets/images/rbroker/1.png')"
               class="portfolio__image mb-11 elevation-11"
             >
-            <p
-              class="portfolio__name font-weight-medium text-center"
+            <a
+              href="http://rbroker.rbs24.by/"
+              target="_blank"
+              class="portfolio__name font-weight-medium text-center black--text"
               v-html="$t('portfolio.rbroker')"
             />
           </div>
@@ -170,8 +172,10 @@
               :src="require('~/assets/images/rleader/1.png')"
               class="portfolio__image mb-11 elevation-11"
             >
-            <p
-              class="portfolio__name font-weight-medium text-center"
+            <a
+              href="https://rleader.rbs24.by/"
+              target="_blank"
+              class="portfolio__name font-weight-medium text-center d-flex justify-center black--text"
               v-html="$t('portfolio.rleader')"
             />
           </div>

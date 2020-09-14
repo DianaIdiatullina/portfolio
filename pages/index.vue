@@ -44,7 +44,7 @@
               class="d-flex align-end font-weight-medium pa-0"
             >
               Frontend Developer<br>
-              26 {{ $t("years") }}
+              27 {{ $t("years") }}
             </v-col>
             <v-col
               cols="3"
@@ -149,7 +149,7 @@
               >
             </div>
             <a
-              href="https://uq.mercury.xamtal.ru/"
+              href="https://ugra-quest.ru/#/"
               target="_blank"
               class="portfolio__name font-weight-medium text-center black--text"
               v-html="$t('portfolio.quest')"

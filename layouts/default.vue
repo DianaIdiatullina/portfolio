@@ -5,9 +5,9 @@
       class="page"
     >
       <header-menu/>
-      <v-content>
+      <v-main>
         <nuxt/>
-      </v-content>
+      </v-main>
     </div>
   </v-app>
 </template>

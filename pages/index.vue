@@ -16,8 +16,15 @@
               class="pa-0 mb-4 mb-sm-0"
             >
               <v-row>
-                <v-col cols="10">
-                  <span class="cover__name font-weight-bold">
+                <v-col
+                  cols="10"
+                  class="pa-0 pt-8"
+                >
+                  <img :src="require('~/assets/images/logo3.jpg')">
+                  <span
+                    v-if="false"
+                    class="cover__name font-weight-bold"
+                  >
                     {{ $t("name") }}<br>
                     {{ $t("lastName") }}
                   </span>
@@ -93,7 +100,7 @@
               justify="center"
             >
               <v-col cols="12" md="6">
-                <p class="about__title text-center font-weight-bold mb-5">{{ $t("about.title") }}</p>
+                <p class="about__title text-center font-weight-bold caramel-text mb-5">{{ $t("about.title") }}</p>
                 <p class="about__text text-center font-weight-medium mb-7">{{ $t("about.text1") }}</p>
                 <p class="about__text text-center font-weight-medium mb-7">{{ $t("about.text2") }}</p>
                 <p class="about__text text-center font-weight-medium mb-7">{{ $t("about.text3") }}</p>
@@ -109,7 +116,7 @@
         class="skills main__section"
       >
         <v-container class="section px-5 px-sm-5 px-md-0 px-lg-0 px-xl-0">
-          <div class="skills__title text-center font-weight-bold mb-5">
+          <div class="skills__title text-center font-weight-bold caramel-text mb-5">
             {{ $t("skills.title") }}
           </div>
           <div class="skills__subtitle text-center font-weight-medium mb-11">
@@ -140,7 +147,7 @@
         class="portfolio main__section"
       >
         <v-container class="section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0">
-          <p class="portfolio__title text-center font-weight-bold mb-12">{{ $t("portfolio.title") }}</p>
+          <p class="portfolio__title text-center font-weight-bold caramel-text mb-12">{{ $t("portfolio.title") }}</p>
           <div class="portfolio__item">
             <div class="d-flex justify-center">
               <img
@@ -188,7 +195,7 @@
         class="contacts skills main__section"
       >
         <v-container class="section px-6 px-sm-6 px-md-0 px-lg-0 px-xl-0">
-          <div class="skills__title text-center font-weight-bold mb-6">
+          <div class="skills__title text-center font-weight-bold caramel-text mb-6">
             {{ $t("contacts.title") }}
           </div>
           <div
@@ -198,7 +205,7 @@
           <div class="text-center">
             <v-btn
               rounded
-              color="black"
+              color="#AE9152"
               dark
               href="https://t.me/dianaidd"
               target="_blank"
@@ -477,5 +484,9 @@ export default {
         }
       }
     }
+  }
+
+  .caramel-text {
+    color: #AE9152;
   }
 </style>

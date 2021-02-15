@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "My first-rate Nuxt.js project",
+  "description": "portfolio",
   "author": "Diana I",
   "private": true,
   "scripts": {

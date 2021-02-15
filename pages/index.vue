@@ -74,12 +74,10 @@
             </v-col>
           </v-row>
 
-          <v-row justify="center">
-            <img
-              :src="require('~/assets/images/foto.jpg')"
-              class="main__photo"
-            >
-          </v-row>
+          <img
+            :src="require('~/assets/images/foto.jpg')"
+            class="main__photo"
+          >
         </v-container>
       </v-col>
 

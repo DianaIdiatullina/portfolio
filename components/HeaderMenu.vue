@@ -3,7 +3,7 @@
     <v-container class="section">
       <v-row
         justify="space-between"
-        class="py-4 flex-nowrap"
+        class="pa-4 flex-nowrap"
       >
         <v-col cols="auto" class="pa-0">
           <a

@@ -77,12 +77,7 @@
           <v-row justify="center">
             <img
               :src="require('~/assets/images/foto.jpg')"
-              class="hidden-xs-only"
-            >
-            <img
-              :src="require('~/assets/images/foto_mobile.jpg')"
-              width="100%"
-              class="hidden-sm-and-up"
+              class="main__photo"
             >
           </v-row>
         </v-container>
@@ -374,6 +369,11 @@ export default {
           }
         }
       }
+    }
+
+    &__photo {
+      width: 100%;
+      object-fit: cover;
     }
 
     .about {
